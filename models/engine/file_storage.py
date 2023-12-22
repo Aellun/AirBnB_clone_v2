@@ -23,7 +23,8 @@ class FileStorage:
 
     def all(self, cls=None):
         """
-        Returns a dict of all objects or objects of a specific class if cls is specified.
+        Returns a dict of all objects or objects of a specific
+        class if cls is specified.
         Args:
             cls: Class type to filter objects
         Returns:
