@@ -90,9 +90,3 @@ class FileStorage:
             pass
         except KeyboardInterrupt:
             pass
-
-    def close(self):
-        """
-        Reloads objects from the file, and closes the storage.
-        """
-        self.reload()
