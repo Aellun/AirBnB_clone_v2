@@ -16,7 +16,6 @@ from models.state import State
 from models.city import City
 
 
-
 def split_curly_braces(e_arg):
     """
     Splits the curly braces for the update method
@@ -51,13 +50,14 @@ def split_curly_braces(e_arg):
                 return id, attr_name
             return f"{id}", f"{attr_name} {attr_value}"
 
+
 class HBNBCommand(cmd.Cmd):
     """
     HBNBCommand class console
     """
     prompt = "(hbnb) "
     valid_classes = ["BaseModel", "User", "Amenity",
-            "Place", "Review", "State", "City"]
+                     "Place", "Review", "State", "City"]
 
     def emptyline(self):
         """
@@ -76,7 +76,6 @@ class HBNBCommand(cmd.Cmd):
         exit the program.
         """
         return True
-
 
     def do_create(self, arg):
         """
@@ -98,7 +97,7 @@ class HBNBCommand(cmd.Cmd):
 
                 key = commands[i].split("=")[0]
                 value = commands[i].split("=")[1]
-                #key, value = tuple(commands[i].split("="))
+                # key, value = tuple(commands[i].split("="))
                 if value.startswith('"'):
                     value = value.strip('"').replace("_", " ")
                 else:
@@ -229,7 +228,7 @@ class HBNBCommand(cmd.Cmd):
                 curly_braces = re.search(r"\{(.*?)\}", arg)
 
                 if curly_braces:
-                    # Attempting to evaluate and update attributes from a dictionary
+                    # Attempting to evaluate and update attributes from a dict
                     try:
                         str_data = curly_braces.group(1)
 
@@ -237,7 +236,7 @@ class HBNBCommand(cmd.Cmd):
 
                         attribute_names = list(arg_dict.keys())
                         attribute_values = list(arg_dict.values())
-                        # Handling each attribute individually with error catching
+                        # Handling each attribute individually
                         try:
                             attr_name1 = attribute_names[0]
                             attr_value1 = attribute_values[0]
