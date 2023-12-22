@@ -15,8 +15,8 @@ class FileStorage:
     """This class serializes instances to a JSON file and
     deserializes JSON file to instances
     Attributes:
-        __file_path: path to the JSON file
-        __objects: objects will be stored
+        __file_path:JSON file path
+        __objects: objects to be stored
     """
     __file_path = "file.json"
     __objects = {}
@@ -26,7 +26,7 @@ class FileStorage:
         Returns a dict of all objects or objects of a specific
         class if cls is specified.
         Args:
-            cls: Class type to filter objects
+            cls: objects Class type to be filtered
         Returns:
             Dictionary of objects or filtered objects by class
         """
@@ -54,7 +54,7 @@ class FileStorage:
             self.__objects[key] = obj
 
     def save(self):
-        """serialize the file path to JSON file path and saves them
+        """serialize the file path to JSON file path and saves
         """
         my_dict = {}
         for key, value in self.__objects.items():
