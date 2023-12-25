@@ -8,6 +8,8 @@ from sqlalchemy.orm import relationship
 from models.place import Place
 
 
+Base = declarative_base()
+
 class City(BaseModel, Base):
     """the class city
     Attributes:
