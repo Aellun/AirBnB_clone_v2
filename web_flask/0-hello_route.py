@@ -10,6 +10,7 @@ app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def hello_hbnb():
+    '''Return a string when the module is queried'''
     return 'Hello HBNB!'
 
 
