@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This script starts flask web application with two routings"""
+"""This script starts flask web application with six routings"""
 
 from flask import Flask, render_template
 app = Flask(__name__)
